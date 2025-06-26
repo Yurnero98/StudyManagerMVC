@@ -1,0 +1,35 @@
+﻿@using MyMvcApp.Application.DTOs
+@model CourseDto
+
+@{
+    ViewData["Title"] = "Delete Course";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+<div class="mb-3">
+    <p class="fw-bold">Are you sure you want to delete this course?</p>
+
+    <dl class="row">
+        <dt class="col-sm-2">Course ID</dt>
+        <dd class="col-sm-10">@Model.CourseId</dd>
+
+        <dt class="col-sm-2">Name</dt>
+        <dd class="col-sm-10">@Model.Name</dd>
+
+        <dt class="col-sm-2">Description</dt>
+        <dd class="col-sm-10">@Model.Description</dd>
+    </dl>
+</div>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="CourseId" />
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}

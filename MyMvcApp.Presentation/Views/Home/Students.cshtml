@@ -1,0 +1,22 @@
+﻿@using MyMvcApp.Application.DTOs
+@model GroupWithStudentsDto
+
+@{
+    ViewData["Title"] = "Students";
+}
+
+<h1>Students in group: @Model.Name</h1>
+
+@if (!Model.Students.Any())
+{
+    <p>No students found in this group.</p>
+}
+else
+{
+    <ul>
+        @foreach (var student in Model.Students)
+        {
+            <li>@student.FirstName @student.LastName</li>
+        }
+    </ul>
+}

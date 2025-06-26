@@ -1,0 +1,46 @@
+﻿@using MyMvcApp.Presentation.ViewModels.StudentViewModels
+@model StudentIndexViewModel
+
+@{
+    ViewData["Title"] = "Student List";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Create New Student</a>
+</p>
+
+@if (!Model.Students.Any())
+{
+    <p>Students not found</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Group</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var student in Model.Students)
+            {
+                <tr>
+                    <td>@student.FirstName</td>
+                    <td>@student.LastName</td>
+                    <td>
+                        @(Model.Groups.ContainsKey(student.GroupId) ? Model.Groups[student.GroupId] : "Unknown")
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@student.StudentId" class="btn btn-sm btn-warning">Edit</a>
+                        <a asp-action="Delete" asp-route-id="@student.StudentId" class="btn btn-sm btn-danger">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

@@ -1,0 +1,44 @@
+﻿@using MyMvcApp.Presentation.ViewModels.GroupViewModels
+@model GroupIndexViewModel
+
+@{
+    ViewData["Title"] = "Groups List";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Create New Group</a>
+</p>
+
+@if (!Model.Groups.Any())
+{
+    <p>Groups not found</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Course</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var group in Model.Groups)
+            {
+                <tr>
+                    <td>@group.Name</td>
+                    <td>
+                        @(Model.Courses.ContainsKey(group.CourseId) ? Model.Courses[group.CourseId] : "Unknown")
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@group.GroupId" class="btn btn-sm btn-warning">Edit</a>
+                        <a asp-action="Delete" asp-route-id="@group.GroupId" class="btn btn-sm btn-danger">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

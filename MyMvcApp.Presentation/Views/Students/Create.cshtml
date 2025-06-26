@@ -1,0 +1,33 @@
+﻿@using MyMvcApp.Presentation.ViewModels.StudentViewModels
+@model StudentEditViewModel
+
+@{
+    ViewData["Title"] = "Create Student";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form asp-action="Create" method="post">
+    <div class="mb-3">
+        <label asp-for="Student.FirstName" class="form-label"></label>
+        <input asp-for="Student.FirstName" class="form-control" />
+        <span asp-validation-for="Student.FirstName" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Student.LastName" class="form-label"></label>
+        <input asp-for="Student.LastName" class="form-control" />
+        <span asp-validation-for="Student.LastName" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Student.GroupId" class="form-label">Group</label>
+        <select asp-for="Student.GroupId" asp-items="Model.Groups" class="form-select">
+            <option value="">-- Select Group --</option>
+        </select>
+        <span asp-validation-for="Student.GroupId" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-success">Create</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

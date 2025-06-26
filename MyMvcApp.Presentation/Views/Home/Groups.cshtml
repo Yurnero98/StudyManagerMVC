@@ -1,0 +1,26 @@
+﻿@using MyMvcApp.Application.DTOs
+@model CourseWithGroupsDto
+
+@{
+    ViewData["Title"] = "Groups";
+}
+
+<h1>Groups for course: @Model.Name</h1>
+
+@if (!Model.Groups.Any())
+{
+    <p>No groups found for this course.</p>
+}
+else
+{
+    <ul>
+        @foreach (var group in Model.Groups)
+        {
+            <li>
+                <a href="@Url.Action("Students", "Home", new { groupId = group.GroupId })">
+                    @group.Name
+                </a>
+            </li>
+        }
+    </ul>
+}

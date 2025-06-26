@@ -1,0 +1,26 @@
+﻿@using MyMvcApp.Application.DTOs
+@model IEnumerable<CourseDto>
+
+@{
+    ViewData["Title"] = "Courses";
+}
+
+<h1>Courses List</h1>
+
+@if (!Model.Any())
+{
+    <p>No courses found.</p>
+}
+else
+{
+    <ul>
+        @foreach (var course in Model)
+        {
+            <li>
+                <a href="@Url.Action("Groups", "Home", new { courseId = course.CourseId })">
+                    @course.Name
+                </a>
+            </li>
+        }
+    </ul>
+}
