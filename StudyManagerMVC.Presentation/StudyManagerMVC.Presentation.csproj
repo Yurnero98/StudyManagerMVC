@@ -12,8 +12,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\MyMvcApp.Domain\MyMvcApp.Domain.csproj" />
-		<ProjectReference Include="..\MyMvcApp.Application\MyMvcApp.Application.csproj" />
-		<ProjectReference Include="..\MyMvcApp.Infrastructure\MyMvcApp.Infrastructure.csproj" />
+		<ProjectReference Include="..\StudyManagerMVC.Domain\StudyManagerMVC.Domain.csproj" />
+		<ProjectReference Include="..\StudyManagerMVC.Application\StudyManagerMVC.Application.csproj" />
+		<ProjectReference Include="..\StudyManagerMVC.Infrastructure\StudyManagerMVC.Infrastructure.csproj" />
 	</ItemGroup>	
 </Project>

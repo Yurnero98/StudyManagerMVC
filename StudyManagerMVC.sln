@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.13.35919.96
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyMvcApp.Domain", "MyMvcApp.Domain\MyMvcApp.Domain.csproj", "{FA4F39ED-1AD8-4AD8-B2E0-E6FA12A5D06C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudyManagerMVC.Domain", "StudyManagerMVC.Domain\StudyManagerMVC.Domain.csproj", "{FA4F39ED-1AD8-4AD8-B2E0-E6FA12A5D06C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyMvcApp.Application", "MyMvcApp.Application\MyMvcApp.Application.csproj", "{3D7A963E-57E3-4A86-B7B1-71E2363C83E7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudyManagerMVC.Application", "StudyManagerMVC.Application\StudyManagerMVC.Application.csproj", "{3D7A963E-57E3-4A86-B7B1-71E2363C83E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyMvcApp.Infrastructure", "MyMvcApp.Infrastructure\MyMvcApp.Infrastructure.csproj", "{A5D056F9-7D79-43F2-96E2-1B1B2FEF65B6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudyManagerMVC.Infrastructure", "StudyManagerMVC.Infrastructure\StudyManagerMVC.Infrastructure.csproj", "{A5D056F9-7D79-43F2-96E2-1B1B2FEF65B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyMvcApp.Presentation", "MyMvcApp.Presentation\MyMvcApp.Presentation.csproj", "{49FCEC07-7A36-4366-9FDF-41844F7C8E59}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudyManagerMVC.Presentation", "StudyManagerMVC.Presentation\StudyManagerMVC.Presentation.csproj", "{49FCEC07-7A36-4366-9FDF-41844F7C8E59}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyMvcApp.Application.Tests", "MyMvcApp.Application.Tests\MyMvcApp.Application.Tests.csproj", "{C992D96C-F0CF-44D0-B98A-5DC57065F1D3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudyManagerMVC.Application.Tests", "StudyManagerMVC.Application.Tests\StudyManagerMVC.Application.Tests.csproj", "{C992D96C-F0CF-44D0-B98A-5DC57065F1D3}"
 	ProjectSection(ProjectDependencies) = postProject
 		{3D7A963E-57E3-4A86-B7B1-71E2363C83E7} = {3D7A963E-57E3-4A86-B7B1-71E2363C83E7}
 		{A5D056F9-7D79-43F2-96E2-1B1B2FEF65B6} = {A5D056F9-7D79-43F2-96E2-1B1B2FEF65B6}
