@@ -32,7 +32,7 @@ Web version of the StudyManager application with full CRUD functionality for stu
 - `StudyManagerMVC.Presentation/` – MVC controllers and Razor views  
 - `StudyManagerMVC.Application.Tests/` – Unit tests for core application logic  
 
-##Prerequisites
+## Prerequisites
 
 - .NET 8 SDK
 
